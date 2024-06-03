@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Welcome to the Sum Calculator!'
+    return 'Welcome to the Sum Calculator1!'
 
 @app.route('/sum', methods=['POST'])
 def sum_numbers():
