@@ -15,6 +15,6 @@ spec:
      spec:
       containers:
         - name: c00
-          image: ubuntu
+          image: 137855620426.dkr.ecr.ap-south-1.amazonaws.com/example:latest
           ports:
           - containerPort: 3000
