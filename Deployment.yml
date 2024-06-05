@@ -1,20 +1,20 @@
-kind: Deployment
 apiVersion: apps/v1
+kind: Deployment
 metadata:
-   name: my-dep
+  name: my-dep
 spec:
-   replicas: 2
-   selector:     
+  replicas: 3
+  selector:
     matchLabels:
-     name: deployment
-   template:
-     metadata:
-       name: testpod
-       labels:
-         name: deployment
-     spec:
+      app: example
+  template:
+    metadata:
+      name: my-pod
+      labels:
+        app: example
+    spec:
       containers:
-        - name: c00
-          image: 137855620426.dkr.ecr.ap-south-1.amazonaws.com/example:latest
-          ports:
-          - containerPort: 3000
+      - name: my-con
+        image: 137855620426.dkr.ecr.ap-south-1.amazonaws.com/example
+        ports:
+        - containerPort: 3000
